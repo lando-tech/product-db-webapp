@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <title>EasyROK - Vendors</title>
+
+</head>
+<body>
+<div th:fragment="my-table(vendors)">
+    <h3>Available Vendors:</h3>
+    <table class="table table-bordered table-striped">
+        <thead class="thead-dark">
+        <tr>
+            <td>Company Name</td>
+            <td>POC Email</td>
+            <td>POC Phone Number</td>
+            <td>Cage Code</td>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="vendor : ${vendors}">
+            <td th:text="${vendor.name}"></td>
+            <td th:text="${vendor.pocEmail}"></td>
+            <td th:text="${vendor.pocPhoneNumber}"></td>
+            <td th:text="${vendor.cageCode}"></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>
