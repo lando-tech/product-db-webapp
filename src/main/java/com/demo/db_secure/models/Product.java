@@ -47,8 +47,8 @@ public abstract class Product implements Serializable {
     @NotNull(message = "Manufacturer cannot be blank")
     Manufacturer manufacturer;
 
-    @NotNull(message = "Auditor cannot be null")
-    private Auditor auditor;
+    // @NotNull(message = "Auditor cannot be null")
+    // private Auditor auditor;
 
     @ManyToMany(fetch = FetchType.LAZY)
     @JoinTable(
@@ -60,39 +60,39 @@ public abstract class Product implements Serializable {
 
     public Product() {}
 
-    public Product(Long id, String name, Auditor auditor) {
+    public Product(Long id, String name) {
         this.id = id;
         this.name = name;
-        this.auditor = auditor;
+        // this.auditor = auditor;
     }
 
-    public Product(Long id, String name, double price, Auditor auditor) {
+    public Product(Long id, String name, double price) {
         this.id = id;
         this.name = name;
         this.price = price;
-        this.auditor = auditor;
+        // this.auditor = auditor;
     }
 
-    public Product(Long id, String name, double price, String partNumber, String manufacturerNumber, Auditor auditor) {
+    public Product(Long id, String name, double price, String partNumber, String manufacturerNumber) {
         this.id = id;
         this.name = name;
         this.price = price;
         this.partNumber = partNumber;
         this.manufacturerNumber = manufacturerNumber;
-        this.auditor = auditor;
+        // this.auditor = auditor;
     }
 
-    public Product(Long id, String name, double price, String partNumber, String manufacturerNumber, ProductCategory productCategory, Auditor auditor) {
+    public Product(Long id, String name, double price, String partNumber, String manufacturerNumber, ProductCategory productCategory) {
         this.id = id;
         this.name = name;
         this.price = price;
         this.partNumber = partNumber;
         this.manufacturerNumber = manufacturerNumber;
         this.productCategory = productCategory;
-        this.auditor = auditor;
+        // this.auditor = auditor;
     }
 
-    public Product(Long id, String name, double price, ProductCategory productCategory, String partNumber, String manufacturerNumber, Manufacturer manufacturer, Auditor auditor) {
+    public Product(Long id, String name, double price, ProductCategory productCategory, String partNumber, String manufacturerNumber, Manufacturer manufacturer) {
         this.id = id;
         this.name = name;
         this.price = price;
@@ -100,7 +100,7 @@ public abstract class Product implements Serializable {
         this.partNumber = partNumber;
         this.manufacturerNumber = manufacturerNumber;
         this.manufacturer = manufacturer;
-        this.auditor = auditor;
+        // this.auditor = auditor;
     }
 
     public Long getId() {
@@ -175,9 +175,9 @@ public abstract class Product implements Serializable {
         this.manufacturer = manufacturer;
     }
 
-    public Auditor getAuditor() {
-        return this.auditor;
-    }
+    // public Auditor getAuditor() {
+    //     return this.auditor;
+    // }
 
     @Override
     public boolean equals(Object o) {

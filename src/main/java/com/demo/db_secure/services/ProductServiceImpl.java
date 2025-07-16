@@ -66,13 +66,13 @@ public class ProductServiceImpl implements ProductService {
         return this.productRepo.findByManufacturer(manufacturer);
     }
 
-    @Override
-    public List<Product> searchProductByKeyword(String keyword) {
-        if (keyword == null) {
-            throw new IllegalArgumentException("keyword cannot be null");
-        }
-        return this.productRepo.searchProductByKeyword(keyword);
-    }
+    // @Override
+    // public List<Product> searchProductByKeyword(String keyword) {
+    //     if (keyword == null) {
+    //         throw new IllegalArgumentException("keyword cannot be null");
+    //     }
+    //     return this.productRepo.searchProductByKeyword(keyword);
+    // }
 
     @Override
     public void save(Product product) {

@@ -13,7 +13,7 @@ public interface ProductService {
     List<Product> listAll(String keyword);
     List<Product> findByCategory(ProductCategory category);
     List<Product> findByManufacturer(Manufacturer manufacturer);
-    List<Product> searchProductByKeyword(String keyword);
+    // List<Product> searchProductByKeyword(String keyword);
     void save(Product product);
     void deleteById(long id);
 }

@@ -4,11 +4,18 @@ import java.io.Serializable;
 import java.time.LocalDateTime;
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
 @Entity(name = "Auditor")
 @Table(name = "AUDITOR")
 public abstract class Auditor implements Serializable {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    Long id;
 
     private final LocalDateTime creationDateTime;
     private final User createdBy;
