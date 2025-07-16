@@ -1,5 +1,4 @@
 
-# EasyROK CRM - Product-Focused TODO List
 
 ## Phase 1: Core Product Functionality (High Priority)
 
