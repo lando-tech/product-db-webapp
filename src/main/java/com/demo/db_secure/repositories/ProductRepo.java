@@ -18,11 +18,4 @@ public interface ProductRepo extends CrudRepository<Product, Long> {
 
     @Query("SELECT p FROM Product p WHERE p.manufacturer = ?1")
     List<Product> findByManufacturer(Manufacturer manufacturer);
-
-    // @Query("SELECT p FROM Product p WHERE " +
-    //         "LOWER(p.name) LIKE LOWER(CONCAT('%', :keyword, '%')) OR " +
-    //         "LOWER(p.description) LIKE LOWER(CONCAT('%', :keyword, '%')) OR " +
-    //         "LOWER(p.partNumber) LIKE (LOWER(CONCAT('%', :keyword, '%')))"
-    // )
-    // List<Product> searchProductByKeyword(String keyword);
 }
