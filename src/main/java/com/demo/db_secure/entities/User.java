@@ -11,7 +11,7 @@ import java.io.Serializable;
 import java.util.Objects;
 
 @Entity(name = "User")
-@Table(name = "USER")
+@Table(name = "users")
 public class User implements Serializable {
 
     @Id
