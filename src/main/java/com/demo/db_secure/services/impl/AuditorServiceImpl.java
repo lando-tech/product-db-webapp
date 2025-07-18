@@ -2,7 +2,7 @@ package com.demo.db_secure.services.impl;
 
 import org.springframework.stereotype.Service;
 
-import com.demo.db_secure.models.Auditor;
+import com.demo.db_secure.entities.Auditor;
 import com.demo.db_secure.repositories.AuditorRepo;
 import com.demo.db_secure.services.interfaces.AuditorService;
 

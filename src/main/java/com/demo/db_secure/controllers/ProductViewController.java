@@ -7,13 +7,13 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import com.demo.db_secure.entities.GenericProduct;
+import com.demo.db_secure.entities.Product;
+import com.demo.db_secure.entities.ProductDescription;
+import com.demo.db_secure.entities.Vendor;
 import com.demo.db_secure.filters.Manufacturer;
 import com.demo.db_secure.filters.ProductCategory;
 import com.demo.db_secure.filters.ProductFilter;
-import com.demo.db_secure.models.GenericProduct;
-import com.demo.db_secure.models.Product;
-import com.demo.db_secure.models.ProductDescription;
-import com.demo.db_secure.models.Vendor;
 import com.demo.db_secure.services.impl.ProductFilterServiceImpl;
 import com.demo.db_secure.services.impl.ProductServiceImpl;
 import com.demo.db_secure.services.impl.VendorServiceImpl;

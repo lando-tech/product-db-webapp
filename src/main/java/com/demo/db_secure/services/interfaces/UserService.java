@@ -2,7 +2,7 @@ package com.demo.db_secure.services.interfaces;
 
 import java.util.Optional;
 
-import com.demo.db_secure.models.User;
+import com.demo.db_secure.entities.User;
 
 public interface UserService {
     Optional<User> findByUserName(String userName);

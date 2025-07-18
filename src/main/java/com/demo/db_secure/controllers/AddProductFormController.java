@@ -9,9 +9,9 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 
+import com.demo.db_secure.entities.*;
 import com.demo.db_secure.filters.Manufacturer;
 import com.demo.db_secure.filters.ProductCategory;
-import com.demo.db_secure.models.*;
 import com.demo.db_secure.services.impl.ProductDescriptionServiceImpl;
 import com.demo.db_secure.services.impl.ProductServiceImpl;
 import com.demo.db_secure.services.impl.VendorServiceImpl;

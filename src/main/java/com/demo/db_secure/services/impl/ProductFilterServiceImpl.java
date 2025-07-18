@@ -2,10 +2,10 @@ package com.demo.db_secure.services.impl;
 
 import org.springframework.stereotype.Service;
 
+import com.demo.db_secure.entities.Product;
 import com.demo.db_secure.filters.Manufacturer;
 import com.demo.db_secure.filters.ProductCategory;
 import com.demo.db_secure.filters.ProductFilter;
-import com.demo.db_secure.models.Product;
 import com.demo.db_secure.services.interfaces.ProductFilterService;
 import com.demo.db_secure.services.interfaces.ProductService;
 

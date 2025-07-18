@@ -5,7 +5,7 @@ import java.util.Optional;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
 
-import com.demo.db_secure.models.User;
+import com.demo.db_secure.entities.User;
 
 
 public interface UserRepo extends CrudRepository<User, Long>{

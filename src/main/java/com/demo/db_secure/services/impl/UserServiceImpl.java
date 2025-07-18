@@ -5,7 +5,7 @@ import java.util.Optional;
 
 import org.springframework.stereotype.Service;
 
-import com.demo.db_secure.models.User;
+import com.demo.db_secure.entities.User;
 import com.demo.db_secure.repositories.UserRepo;
 import com.demo.db_secure.services.interfaces.UserService;
 

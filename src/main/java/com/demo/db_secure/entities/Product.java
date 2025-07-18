@@ -1,4 +1,4 @@
-package com.demo.db_secure.models;
+package com.demo.db_secure.entities;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Min;

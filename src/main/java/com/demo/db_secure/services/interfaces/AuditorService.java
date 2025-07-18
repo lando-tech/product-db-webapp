@@ -2,7 +2,7 @@ package com.demo.db_secure.services.interfaces;
 
 import java.util.List;
 
-import com.demo.db_secure.models.Auditor;
+import com.demo.db_secure.entities.Auditor;
 
 public interface AuditorService {
     List<Auditor> findAll();

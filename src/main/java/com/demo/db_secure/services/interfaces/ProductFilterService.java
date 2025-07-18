@@ -2,10 +2,10 @@ package com.demo.db_secure.services.interfaces;
 
 import java.util.List;
 
+import com.demo.db_secure.entities.Product;
 import com.demo.db_secure.filters.Manufacturer;
 import com.demo.db_secure.filters.ProductCategory;
 import com.demo.db_secure.filters.ProductFilter;
-import com.demo.db_secure.models.Product;
 
 public interface ProductFilterService {
     List<Product> filterProducts(ProductFilter productFilter);

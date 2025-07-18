@@ -1,4 +1,4 @@
-package com.demo.db_secure.models;
+package com.demo.db_secure.entities;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
