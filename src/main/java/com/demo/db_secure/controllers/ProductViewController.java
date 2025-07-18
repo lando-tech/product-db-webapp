@@ -14,9 +14,9 @@ import com.demo.db_secure.models.GenericProduct;
 import com.demo.db_secure.models.Product;
 import com.demo.db_secure.models.ProductDescription;
 import com.demo.db_secure.models.Vendor;
-import com.demo.db_secure.services.ProductFilterServiceImpl;
-import com.demo.db_secure.services.ProductServiceImpl;
-import com.demo.db_secure.services.VendorServiceImpl;
+import com.demo.db_secure.services.impl.ProductFilterServiceImpl;
+import com.demo.db_secure.services.impl.ProductServiceImpl;
+import com.demo.db_secure.services.impl.VendorServiceImpl;
 
 import java.util.List;
 
@@ -28,8 +28,8 @@ public class ProductViewController {
     private final ProductFilterServiceImpl filterService;
 
     public ProductViewController(
-        ProductServiceImpl productService, 
-        VendorServiceImpl vendorService, 
+        ProductServiceImpl productService,
+        VendorServiceImpl vendorService,
         ProductFilterServiceImpl filterService
         ) {
         this.productService = productService;
@@ -45,7 +45,7 @@ public class ProductViewController {
 
         // Create filter object
         ProductFilter filter = new ProductFilter(productCategory, manufacturer);
-        
+
         // Get filtered products
         List<Product> products = filterService.filterProducts(filter);
 
@@ -54,7 +54,7 @@ public class ProductViewController {
         model.addAttribute("filter", filter);
         model.addAttribute("productCategory", ProductCategory.values());
         model.addAttribute("manufacturer", Manufacturer.values());
-        
+
         return "productView";
     }
 

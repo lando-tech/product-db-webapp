@@ -1,4 +1,4 @@
-package com.demo.db_secure.services;
+package com.demo.db_secure.services.interfaces;
 
 import java.util.List;
 

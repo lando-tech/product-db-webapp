@@ -1,4 +1,4 @@
-package com.demo.db_secure.services;
+package com.demo.db_secure.services.impl;
 
 import org.springframework.stereotype.Service;
 
@@ -6,6 +6,7 @@ import com.demo.db_secure.filters.Manufacturer;
 import com.demo.db_secure.filters.ProductCategory;
 import com.demo.db_secure.models.Product;
 import com.demo.db_secure.repositories.ProductRepo;
+import com.demo.db_secure.services.interfaces.ProductService;
 
 import java.util.ArrayList;
 import java.util.List;

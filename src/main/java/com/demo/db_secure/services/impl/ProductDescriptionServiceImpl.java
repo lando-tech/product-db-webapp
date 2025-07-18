@@ -1,4 +1,4 @@
-package com.demo.db_secure.services;
+package com.demo.db_secure.services.impl;
 
 import java.util.List;
 import java.util.Optional;
@@ -7,10 +7,11 @@ import org.springframework.stereotype.Service;
 
 import com.demo.db_secure.models.ProductDescription;
 import com.demo.db_secure.repositories.ProductDescriptionRepo;
+import com.demo.db_secure.services.interfaces.ProductDescriptionService;
 
 @Service
 public class ProductDescriptionServiceImpl implements ProductDescriptionService {
-    
+
     private final ProductDescriptionRepo productDescriptionRepo;
 
     public ProductDescriptionServiceImpl(ProductDescriptionRepo productDescriptionRepo) {
@@ -19,7 +20,7 @@ public class ProductDescriptionServiceImpl implements ProductDescriptionService 
 
     @Override
     public List<ProductDescription> findAll() {
-        return (List<ProductDescription>) this.productDescriptionRepo.findAll(); 
+        return (List<ProductDescription>) this.productDescriptionRepo.findAll();
     }
 
     @Override
@@ -36,5 +37,5 @@ public class ProductDescriptionServiceImpl implements ProductDescriptionService 
     public void deleteById(Long id) {
         this.productDescriptionRepo.deleteById(id);
     }
-    
+
 }
