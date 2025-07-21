@@ -12,7 +12,6 @@ import jakarta.validation.Valid;
 import org.springframework.web.bind.annotation.PostMapping;
 
 
-
 @Controller
 public class UserFormController {
 
@@ -23,10 +22,10 @@ public class UserFormController {
     }
 
     @PostMapping("/userForm")
-    public String postUserForm(@Valid @ModelAttribute User user, Model model, BindingResult bindingResult) {
+    public String postUserForm(@Valid @ModelAttribute("user") User user, BindingResult bindingResult, Model model) {
+        model.addAttribute("user", user);
         if (bindingResult.hasErrors()) {
-            model.addAttribute("user", user);
-            return "redirect:/userForm";
+            return "userForm";
         }
         return "redirect:/dashboard";
     }

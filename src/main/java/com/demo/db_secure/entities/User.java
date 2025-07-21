@@ -35,17 +35,16 @@ public class User implements Serializable {
 
     @NotBlank(message = "Password cannot be blank")
     @NotNull(message = "Password cannot be null")
-    @Min(value = 12, message = "Password must be at least 12 characters")
-    @Max(value = 32, message = "Password cannot exceed 32 characters")
+    @Size(min = 12, max = 32, message = "Password must be between 12 and 32 characters")
     private String password;
 
-    @Size(max = 50)
+    @Size(max = 50, message = "Email cannot exceed 50 characers")
     private String email;
 
     @Size(max = 14, message = "Phone number cannot exceed 14 digits, please enter a valid phone number")
     private String phoneNumber;
 
-    @Max(value = 50, message = "Company name cannot exceed 50 characters")
+    @Size(max = 50, message = "Company name cannot exceed 50 characters")
     private String companyName;
 
     public User() {}
