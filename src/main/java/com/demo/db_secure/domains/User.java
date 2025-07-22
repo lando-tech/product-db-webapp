@@ -1,10 +1,6 @@
-package com.demo.db_secure.entities;
+package com.demo.db_secure.domains;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import jakarta.validation.constraints.*;
 
 import java.io.Serializable;
@@ -12,7 +8,7 @@ import java.util.Objects;
 
 @Entity(name = "User")
 @Table(name = "users")
-public class User implements Serializable {
+public class User extends Auditable implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -38,23 +34,16 @@ public class User implements Serializable {
     @Size(min = 12, max = 32, message = "Password must be between 12 and 32 characters")
     private String password;
 
-    @Size(max = 50, message = "Email cannot exceed 50 characers")
-    private String email;
-
-    @Size(max = 14, message = "Phone number cannot exceed 14 digits, please enter a valid phone number")
-    private String phoneNumber;
-
-    @Size(max = 50, message = "Company name cannot exceed 50 characters")
-    private String companyName;
+    @OneToOne
+    private UserProfile userProfile;
 
     public User() {}
 
-    public User(String userName, String firstName, String lastName, String password, String email) {
+    public User(String userName, String firstName, String lastName, String password) {
         this.userName = userName;
         this.firstName = firstName;
         this.lastName = lastName;
         this.password = password;
-        this.email = email;
     }
 
     public Long getId() {
@@ -97,28 +86,12 @@ public class User implements Serializable {
         this.password = password;
     }
 
-    public String getEmail() {
-        return email;
+    public UserProfile getUserProfile() {
+        return userProfile;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    public String getPhoneNumber() {
-        return phoneNumber;
-    }
-
-    public void setPhoneNumber(String phoneNumber) {
-        this.phoneNumber = phoneNumber;
-    }
-
-    public String getCompanyName() {
-        return companyName;
-    }
-
-    public void setCompanyName(String companyName) {
-        this.companyName = companyName;
+    public void setUserProfile(UserProfile userProfile) {
+        this.userProfile = userProfile;
     }
 
     @Override
@@ -132,5 +105,4 @@ public class User implements Serializable {
     public int hashCode() {
         return Objects.hashCode(id);
     }
-
 }

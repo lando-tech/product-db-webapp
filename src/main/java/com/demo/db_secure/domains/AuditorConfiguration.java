@@ -1,4 +1,4 @@
-package com.demo.db_secure.entities;
+package com.demo.db_secure.domains;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

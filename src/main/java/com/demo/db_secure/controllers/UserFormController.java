@@ -6,7 +6,7 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 
-import com.demo.db_secure.entities.User;
+import com.demo.db_secure.domains.User;
 
 import jakarta.validation.Valid;
 import org.springframework.web.bind.annotation.PostMapping;

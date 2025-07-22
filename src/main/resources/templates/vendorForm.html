@@ -19,35 +19,37 @@
     <h1>Your Company</h1>
     <br>
     <div th:insert="~{fragments/navbar :: navbar}"></div>
-    <form id="vendorFormSubmit" action="#" th:action="@{/vendorForm}" th:object="${vendor}" method="post">
-        <p><input type="hidden" th:field="*{id}"/></p>
-        <div>
-            <label for="vendorName">Name:</label>
-            <input id="vendorName" type="text" th:field="*{name}" placeholder="Company Name" class="form-control mb-4 col-4"/>
-            <div th:if="${#fields.hasErrors('name')}" th:error="*{name}" class="text-danger"></div>
-        </div>
-        <div>
-            <label for="vendorEmail">POC Email:</label>
-            <input id="vendorEmail" type="text" th:field="*{pocEmail}" placeholder="john@doe.com" class="form-control mb-4 col-4"/>
-            <div th:if="${#fields.hasErrors('name')}" th:error="*{pocEmail}" class="text-danger"></div>
-        </div>
-        <div>
-            <label for="vendorPhoneNum">POC Phone #:</label>
-            <input id="vendorPhoneNum" type="text" th:field="*{pocPhoneNumber}" placeholder="123-456-6789" class="form-control mb-4 col-4"/>
-            <div th:if="${#fields.hasErrors('name')}" th:error="*{pocPhoneNumber}" class="text-danger"></div>
-        </div>
-        <div>
-            <label for="vendorCageCode">Cage Code:</label>
-            <input id="vendorCageCode" type="text" th:field="*{cageCode}" placeholder="Cage Code" class="form-control mb-4 col-4"/>
-            <div th:if="${#fields.hasErrors('cageCode')}" th:error="*{cageCode}" class="text-danger"></div>
-        </div>
-        <div th:if="${#fields.hasAnyErrors()}">
-            <ul>
-                <li th:each="err: ${#fields.allErrors()}" th:text="${err}" class="text-danger"></li>
-            </ul>
-        </div>
-        <p><input type="submit" value="Submit"/></p>
-    </form>
+    <br>
+    <div>
+        <form id="vendorFormSubmit" action="#" th:action="@{/vendorFormSubmit}" th:object="${vendor}" method="post">
+            <p><input type="hidden" th:field="*{id}"/></p>
+            <div>
+                <label for="vendorName">Name:</label>
+                <div th:if="${#fields.hasErrors('name')}" th:errors="*{name}" class="text-danger"></div>
+                <div id="vendorNameErr" class="client-side-errors"></div>
+                <input id="vendorName" type="text" th:field="*{name}" placeholder="Company Name" class="form-control mb-4 col-4"/>
+            </div>
+            <div>
+                <label for="vendorEmail">POC Email:</label>
+                <div th:if="${#fields.hasErrors('name')}" th:errors="*{pocEmail}" class="text-danger"></div>
+                <div id="vendorEmailErr" class="client-side-errors"></div>
+                <input id="vendorEmail" type="text" th:field="*{pocEmail}" placeholder="john@doe.com" class="form-control mb-4 col-4"/>
+            </div>
+            <div>
+                <label for="vendorPhoneNum">POC Phone #:</label>
+                <div th:if="${#fields.hasErrors('name')}" th:errors="*{pocPhoneNumber}" class="text-danger"></div>
+                <div id="vendorPhoneErr" class="client-side-errors"></div>
+                <input id="vendorPhoneNum" type="text" th:field="*{pocPhoneNumber}" placeholder="123-456-6789" class="form-control mb-4 col-4"/>
+            </div>
+            <div>
+                <label for="vendorCageCode">Cage Code:</label>
+                <div th:if="${#fields.hasErrors('cageCode')}" th:errors="*{cageCode}" class="text-danger"></div>
+                <div id="cageCodeErr" class="client-side-errors"></div>
+                <input id="vendorCageCode" type="text" th:field="*{cageCode}" placeholder="Cage Code" class="form-control mb-4 col-4"/>
+            </div>
+            <p><input type="submit" value="Submit"/></p>
+        </form>
+    </div>
 </div>
 </body>
 </html>

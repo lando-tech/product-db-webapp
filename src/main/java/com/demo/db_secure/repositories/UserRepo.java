@@ -5,7 +5,7 @@ import java.util.Optional;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
 
-import com.demo.db_secure.entities.User;
+import com.demo.db_secure.domains.User;
 
 
 public interface UserRepo extends CrudRepository<User, Long>{
@@ -17,13 +17,4 @@ public interface UserRepo extends CrudRepository<User, Long>{
 
     @Query("SELECT p FROM User p WHERE p.lastName = ?1")
     Optional<User> findByLastName(String lastName);
-
-    @Query("SELECT p FROM User p WHERE p.email = ?1")
-    Optional<User> findByEmail(String email);
-
-    @Query("SELECT p FROM User p WHERE p.phoneNumber = ?1")
-    Optional<User> findByPhoneNumber(String phoneNumber);
-
-    @Query("SELECT p FROM User p WHERE p.companyName = ?1")
-    Optional<User> findByCompany(String companyName);
 }

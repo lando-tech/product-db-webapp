@@ -3,7 +3,7 @@ package com.demo.db_secure.repositories;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
 
-import com.demo.db_secure.entities.products.Product;
+import com.demo.db_secure.domains.products.Product;
 import com.demo.db_secure.filters.Manufacturer;
 import com.demo.db_secure.filters.ProductCategory;
 

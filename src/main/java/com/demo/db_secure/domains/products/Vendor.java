@@ -1,4 +1,4 @@
-package com.demo.db_secure.entities.products;
+package com.demo.db_secure.domains.products;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Email;

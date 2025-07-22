@@ -1,6 +1,6 @@
-package com.demo.db_secure.entities.products;
+package com.demo.db_secure.domains.products;
 
-import com.demo.db_secure.entities.Auditable;
+import com.demo.db_secure.domains.Auditable;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotBlank;

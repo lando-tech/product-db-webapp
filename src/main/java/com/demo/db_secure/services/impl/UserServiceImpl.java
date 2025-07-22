@@ -5,7 +5,7 @@ import java.util.Optional;
 
 import org.springframework.stereotype.Service;
 
-import com.demo.db_secure.entities.User;
+import com.demo.db_secure.domains.User;
 import com.demo.db_secure.repositories.UserRepo;
 import com.demo.db_secure.services.interfaces.UserService;
 
@@ -35,21 +35,6 @@ public class UserServiceImpl implements UserService {
     @Override
     public Optional<User> findByLastName(String lastName) {
         return this.userRepo.findByLastName(lastName);
-    }
-
-    @Override
-    public Optional<User> findByEmail(String email) {
-        return this.userRepo.findByEmail(email);
-    }
-
-    @Override
-    public Optional<User> findByPhoneNumber(String phoneNumber) {
-        return this.userRepo.findByPhoneNumber(phoneNumber);
-    }
-
-    @Override
-    public Optional<User> findByCompany(String companyName) {
-        return this.userRepo.findByCompany(companyName);
     }
 
     public List<User> findAll() {

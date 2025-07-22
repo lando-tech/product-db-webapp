@@ -1,8 +1,8 @@
 package com.demo.db_secure.controllers;
 
-import com.demo.db_secure.entities.products.GenericProduct;
-import com.demo.db_secure.entities.products.ProductDescription;
-import com.demo.db_secure.entities.products.Vendor;
+import com.demo.db_secure.domains.products.GenericProduct;
+import com.demo.db_secure.domains.products.ProductDescription;
+import com.demo.db_secure.domains.products.Vendor;
 import jakarta.validation.Valid;
 import org.springframework.ui.Model;
 import org.springframework.stereotype.Controller;
@@ -59,20 +59,24 @@ public class AddProductFormController {
         }
         updateProductDescription(product, productDescription);
         productService.save(product);
-        return "redirect:/views/productView";
+        return "redirect:/productView";
     }
 
     @PostMapping("/addVendorToProduct/{id}")
-    public void addVendorToProduct(@PathVariable("id") Long vendorID, GenericProduct product, BindingResult bindingResult) {
+    public String addVendorToProduct(@PathVariable("id") Long vendorID, GenericProduct product, BindingResult bindingResult) {
         if (vendorService.findById(vendorID) != null) {
             for (Vendor vendor : product.getVendors()) {
                 if (vendor.getId().equals(vendorID)) {
                     bindingResult.rejectValue("vendorId", "error.vendorId");
+                    return "productForm";
                 } else {
                     product.addVendor(vendor);
+                    vendor.addProduct(product);
+                    return "redirect:/productForm";
                 }
             }
         }
+        return "redirect:/productView";
     }
 
     public void updateProductDescription(GenericProduct product, ProductDescription productDescription) {
