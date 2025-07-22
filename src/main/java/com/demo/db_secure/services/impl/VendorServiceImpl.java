@@ -2,7 +2,7 @@ package com.demo.db_secure.services.impl;
 
 import org.springframework.stereotype.Service;
 
-import com.demo.db_secure.entities.Vendor;
+import com.demo.db_secure.entities.products.Vendor;
 import com.demo.db_secure.repositories.VendorRepo;
 import com.demo.db_secure.services.interfaces.VendorService;
 

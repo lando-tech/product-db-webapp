@@ -1,5 +1,8 @@
 package com.demo.db_secure.controllers;
 
+import com.demo.db_secure.entities.products.GenericProduct;
+import com.demo.db_secure.entities.products.ProductDescription;
+import com.demo.db_secure.entities.products.Vendor;
 import jakarta.validation.Valid;
 import org.springframework.ui.Model;
 import org.springframework.stereotype.Controller;
@@ -9,7 +12,6 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 
-import com.demo.db_secure.entities.*;
 import com.demo.db_secure.filters.Manufacturer;
 import com.demo.db_secure.filters.ProductCategory;
 import com.demo.db_secure.services.impl.ProductDescriptionServiceImpl;
@@ -38,15 +40,16 @@ public class AddProductFormController {
         return "productForm";
     }
 
-    @PostMapping("/productForm")
+    @PostMapping("/processProductForm")
     public String processProductForm(
             @Valid @ModelAttribute("product") GenericProduct product,
+            BindingResult bindingResult1,
             @Valid @ModelAttribute("productDescription") ProductDescription productDescription,
-            BindingResult bindingResult,
+            BindingResult bindingResult2,
             Model model
     ) {
         model.addAttribute("product",  product);
-        if (bindingResult.hasErrors()) {
+        if (bindingResult1.hasErrors() || bindingResult2.hasErrors()) {
             updateProductDescription(product, productDescription);
             model.addAttribute("productDescription", product.getProductDescription());
             model.addAttribute("manufacturer", Manufacturer.values());
@@ -56,7 +59,7 @@ public class AddProductFormController {
         }
         updateProductDescription(product, productDescription);
         productService.save(product);
-        return "redirect:/productView";
+        return "redirect:/views/productView";
     }
 
     @PostMapping("/addVendorToProduct/{id}")

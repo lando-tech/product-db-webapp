@@ -22,9 +22,9 @@ function clearFormForInput(elementId, errorElemId) {
 }
 
 
-const form = document.querySelector("#userFormSubmit");
+const addUserForm = document.querySelector("#userFormSubmit");
 
-form.addEventListener("submit", function(event) {
+addUserForm.addEventListener("submit", function(event) {
     let hasClientSideErrors = false;
 
     const fieldNames = ["userNameField", "firstNameField", "lastNameField", "passwordField"];

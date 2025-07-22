@@ -1,4 +1,4 @@
-package com.demo.db_secure.entities;
+package com.demo.db_secure.entities.products;
 
 import jakarta.persistence.*;
 

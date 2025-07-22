@@ -1,4 +1,4 @@
-package com.demo.db_secure.entities;
+package com.demo.db_secure.entities.products;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Email;
@@ -30,12 +30,7 @@ public class Vendor implements Serializable {
     @Size(min = 0, max = 50, message = "Vendor Cage Code cannot exceed 50 characters")
     private String cageCode;
 
-    @ManyToMany(fetch = FetchType.LAZY)
-    @JoinTable(
-            name = "vendor_products",
-            joinColumns = @JoinColumn(name = "product_id"),
-            inverseJoinColumns = @JoinColumn(name = "vendor_id")
-    )
+    @ManyToMany(fetch = FetchType.LAZY, mappedBy = "vendors")
     private Set<Product> products = new HashSet<>();
 
     public Vendor() {}

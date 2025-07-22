@@ -1,5 +1,6 @@
-package com.demo.db_secure.entities;
+package com.demo.db_secure.entities.products;
 
+import com.demo.db_secure.entities.Auditable;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotBlank;
@@ -16,8 +17,10 @@ import com.demo.db_secure.filters.ProductCategory;
 import java.util.Objects;
 
 @Entity(name = "Product")
+@Inheritance(strategy = InheritanceType.SINGLE_TABLE)
+@DiscriminatorColumn(name = "product_type", discriminatorType = DiscriminatorType.STRING)
 @Table(name = "PRODUCT")
-public abstract class Product implements Serializable {
+public abstract class Product extends Auditable implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -25,7 +28,7 @@ public abstract class Product implements Serializable {
 
     @NotNull(message = "Product name cannot be blank")
     @NotBlank(message = "Product name cannot be blank")
-    @Size(max = 250, message = "Name cannot exceed 250 characters")
+    @Size(max = 50, message = "Name cannot exceed 250 characters")
     private String name;
 
     @NotNull(message = "Part number cannot be a null value")
@@ -47,9 +50,6 @@ public abstract class Product implements Serializable {
     @NotNull(message = "Manufacturer cannot be blank")
     Manufacturer manufacturer;
 
-    // @NotNull(message = "Auditor cannot be null")
-    // private Auditor auditor;
-
     @ManyToMany(fetch = FetchType.LAZY)
     @JoinTable(
             name = "product_vendor",
@@ -63,14 +63,12 @@ public abstract class Product implements Serializable {
     public Product(Long id, String name) {
         this.id = id;
         this.name = name;
-        // this.auditor = auditor;
     }
 
     public Product(Long id, String name, double price) {
         this.id = id;
         this.name = name;
         this.price = price;
-        // this.auditor = auditor;
     }
 
     public Product(Long id, String name, double price, String partNumber, String manufacturerNumber) {
@@ -79,7 +77,6 @@ public abstract class Product implements Serializable {
         this.price = price;
         this.partNumber = partNumber;
         this.manufacturerNumber = manufacturerNumber;
-        // this.auditor = auditor;
     }
 
     public Product(Long id, String name, double price, String partNumber, String manufacturerNumber, ProductCategory productCategory) {
@@ -89,7 +86,6 @@ public abstract class Product implements Serializable {
         this.partNumber = partNumber;
         this.manufacturerNumber = manufacturerNumber;
         this.productCategory = productCategory;
-        // this.auditor = auditor;
     }
 
     public Product(Long id, String name, double price, ProductCategory productCategory, String partNumber, String manufacturerNumber, Manufacturer manufacturer) {
@@ -100,7 +96,6 @@ public abstract class Product implements Serializable {
         this.partNumber = partNumber;
         this.manufacturerNumber = manufacturerNumber;
         this.manufacturer = manufacturer;
-        // this.auditor = auditor;
     }
 
     public Long getId() {
@@ -174,10 +169,6 @@ public abstract class Product implements Serializable {
     public void setManufacturer(Manufacturer manufacturer) {
         this.manufacturer = manufacturer;
     }
-
-    // public Auditor getAuditor() {
-    //     return this.auditor;
-    // }
 
     @Override
     public boolean equals(Object o) {

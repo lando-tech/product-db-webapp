@@ -12,6 +12,8 @@
           integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
     <title th:text="${product.id == null || product.id == 0} ? 'Add Product' : 'Update Product'">Form</title>
+
+    <link rel="stylesheet" href="/css/main.css">
 </head>
 <body>
 <div class="container">
@@ -21,7 +23,8 @@
     <div th:insert="~{fragments/navbar :: navbar}"></div>
     <br>
     <div>
-        <form id="productFormSubmit" action="#" th:action="@{/productForm}" th:object="${product}" method="post">
+        <form id="productFormSubmit" action="#" th:action="@{/processProductForm}" th:object="${product}" method="post">
+            <script src="/js/form_validators/validateProductForm.js"></script>
             <div class="row">
                 <div class="col-md-6">
                     <h3 th:text="${product.id == null || product.id == 0} ? 'Add Product' : 'Update Product'"></h3>
@@ -29,16 +32,19 @@
                     <div>
                         <label for="productName">Name:</label>
                         <div th:if="${#fields.hasErrors('name')}" th:errors="*{name}" class="text-danger"></div>
+                        <div id="productNameError" class="client-side-errors"></div>
                         <input id="productName" type="text" th:field="*{name}" placeholder="Product Name" class="form-control mb-4 col-4"/>
                     </div>
                     <div>
                         <label for="productPartNumber">Part No. Internal:</label>
                         <div th:if="${#fields.hasErrors('partNumber')}" th:errors="*{partNumber}" class="text-danger"></div>
+                        <div id="productPartNumberError" class="client-side-errors"></div>
                         <input id="productPartNumber" type="text" th:field="*{partNumber}" placeholder="Part Number" class="form-control mb-4 col-4"/>
                     </div>
                     <div>
                         <label for="manufacturer">Manufacturer:</label>
                         <div th:if="${#fields.hasErrors('manufacturer')}" th:errors="*{manufacturer}" class="text-danger"></div>
+                        <div id="manufacturerError" class="client-side-errors"></div>
                         <select id="manufacturer" th:field="*{manufacturer}" class="form-select mb-4 col-4">
                             <option value="">-- Select a Category --</option>
                             <option th:each="option : ${manufacturer}"
@@ -49,16 +55,19 @@
                     <div>
                         <label for="productManufacturerNumber">Manufacturer Part No.:</label>
                         <div th:if="${#fields.hasErrors('manufacturerNumber')}" th:errors="*{manufacturerNumber}" class="text-danger"></div>
+                        <div id="productManufacturerNumberError" class="client-side-errors"></div>
                         <input id="productManufacturerNumber" type="text" th:field="*{manufacturerNumber}" placeholder="Manufacturer part number" class="form-control mb-4 col-4"/>
                     </div>
                     <div>
                         <label for="productPrice">Price (Per Unit):</label>
                         <div th:if="${#fields.hasErrors('price')}" th:errors="*{price}" class="text-danger"></div>
+                        <div id="productPriceError" class="client-side-errors"></div>
                         <input id="productPrice" type="text" th:field="*{price}" placeholder="Price" class="form-control mb-4 col-4"/>
                     </div>
                     <div>
                         <label for="productCategory">Category:</label>
                         <div th:if="${#fields.hasErrors('productCategory')}" th:errors="*{productCategory}" class="text-danger"></div>
+                        <div id="productCategoryError" class="client-side-errors"></div>
                         <select id="productCategory" th:field="*{productCategory}" class="form-select mb-4 col-4">
                             <option value="">-- Select a Category --</option>
                             <option th:each="option : ${productCategory}"

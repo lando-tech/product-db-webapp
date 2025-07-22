@@ -5,7 +5,7 @@ import java.util.Optional;
 
 import org.springframework.stereotype.Service;
 
-import com.demo.db_secure.entities.ProductDescription;
+import com.demo.db_secure.entities.products.ProductDescription;
 import com.demo.db_secure.repositories.ProductDescriptionRepo;
 import com.demo.db_secure.services.interfaces.ProductDescriptionService;
 

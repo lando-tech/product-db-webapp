@@ -3,7 +3,7 @@ package com.demo.db_secure.services.interfaces;
 import java.util.List;
 import java.util.Optional;
 
-import com.demo.db_secure.entities.ProductDescription;
+import com.demo.db_secure.entities.products.ProductDescription;
 
 public interface ProductDescriptionService {
     List<ProductDescription> findAll();

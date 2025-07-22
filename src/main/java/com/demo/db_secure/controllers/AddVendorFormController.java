@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 
-import com.demo.db_secure.entities.Vendor;
+import com.demo.db_secure.entities.products.Vendor;
 import com.demo.db_secure.repositories.VendorRepo;
 
 @Controller
