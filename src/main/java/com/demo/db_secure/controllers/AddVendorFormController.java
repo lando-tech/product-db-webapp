@@ -1,6 +1,6 @@
 package com.demo.db_secure.controllers;
 
-import com.demo.db_secure.services.impl.VendorServiceImpl;
+import com.demo.db_secure.services.interfaces.VendorService;
 import jakarta.validation.Valid;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -14,9 +14,9 @@ import com.demo.db_secure.domains.products.Vendor;
 @Controller
 public class AddVendorFormController {
 
-    private final VendorServiceImpl vendorService;
+    private final VendorService vendorService;
 
-    public AddVendorFormController(VendorServiceImpl vendorService) {
+    public AddVendorFormController(VendorService vendorService) {
         this.vendorService = vendorService;
     }
 
@@ -37,6 +37,6 @@ public class AddVendorFormController {
             return "vendorForm";
         }
         this.vendorService.save(vendor);
-        return "redirect:/dashboard";
+        return "redirect:/vendorView";
     }
 }

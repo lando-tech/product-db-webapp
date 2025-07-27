@@ -123,9 +123,9 @@
                     <td th:text="${vendor.pocPhoneNumber}"></td>
                     <td th:text="${vendor.cageCode}"></td>
                     <td>
-                        <form th:action="@{/addVendorToProduct/{id}(id=${vendor.id})}" method="post">
+                        <form th:action="@{/addVendorToProduct/{id}/{productId}(id=${vendor.id}, productId=${product.id})}" method="post">
                             <input type="hidden">
-                            <button type="submit" class="btn btn-primary btn-sm mb-3" disabled>Add</button>
+                            <button type="submit" class="btn btn-primary btn-sm mb-3">Add</button>
                         </form>
                     </td>
                 </tr>

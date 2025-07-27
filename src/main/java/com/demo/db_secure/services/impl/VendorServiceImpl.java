@@ -4,13 +4,12 @@ import org.springframework.stereotype.Service;
 
 import com.demo.db_secure.domains.products.Vendor;
 import com.demo.db_secure.repositories.VendorRepo;
-import com.demo.db_secure.services.interfaces.VendorService;
 
 import java.util.ArrayList;
 import java.util.List;
 
 @Service
-public class VendorServiceImpl implements VendorService {
+public class VendorServiceImpl implements com.demo.db_secure.services.interfaces.VendorService {
     @SuppressWarnings("FieldCanBeLocal")
     private final VendorRepo vendorRepo;
 

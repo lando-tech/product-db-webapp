@@ -1,5 +1,8 @@
 package com.demo.db_secure.controllers;
 
+import com.demo.db_secure.services.interfaces.ProductFilterService;
+import com.demo.db_secure.services.interfaces.ProductService;
+import com.demo.db_secure.services.interfaces.VendorService;
 import org.springframework.ui.Model;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -23,9 +26,9 @@ import java.util.List;
 @Controller
 public class ProductViewController {
 
-    private final ProductServiceImpl productService;
-    private final VendorServiceImpl vendorService;
-    private final ProductFilterServiceImpl filterService;
+    private final ProductService productService;
+    private final VendorService vendorService;
+    private final ProductFilterService filterService;
 
     public ProductViewController(
         ProductServiceImpl productService,
@@ -48,9 +51,11 @@ public class ProductViewController {
 
         // Get filtered products
         List<Product> products = filterService.filterProducts(filter);
+        List<Vendor> vendors = vendorService.findAll();
 
         // Add attributes to model
         model.addAttribute("products", products);
+        model.addAttribute("vendors", vendors);
         model.addAttribute("filter", filter);
         model.addAttribute("productCategory", ProductCategory.values());
         model.addAttribute("manufacturer", Manufacturer.values());

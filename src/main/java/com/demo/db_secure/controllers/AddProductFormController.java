@@ -3,6 +3,9 @@ package com.demo.db_secure.controllers;
 import com.demo.db_secure.domains.products.GenericProduct;
 import com.demo.db_secure.domains.products.ProductDescription;
 import com.demo.db_secure.domains.products.Vendor;
+import com.demo.db_secure.services.interfaces.ProductDescriptionService;
+import com.demo.db_secure.services.interfaces.ProductService;
+import com.demo.db_secure.services.interfaces.VendorService;
 import jakarta.validation.Valid;
 import org.springframework.ui.Model;
 import org.springframework.stereotype.Controller;
@@ -14,17 +17,14 @@ import org.springframework.web.bind.annotation.PostMapping;
 
 import com.demo.db_secure.filters.Manufacturer;
 import com.demo.db_secure.filters.ProductCategory;
-import com.demo.db_secure.services.impl.ProductDescriptionServiceImpl;
-import com.demo.db_secure.services.impl.ProductServiceImpl;
-import com.demo.db_secure.services.impl.VendorServiceImpl;
 
 @Controller
 public class AddProductFormController {
-    private final ProductServiceImpl productService;
-    private final VendorServiceImpl vendorService;
-    private final ProductDescriptionServiceImpl productDescriptionService;
+    private final ProductService productService;
+    private final VendorService vendorService;
+    private final ProductDescriptionService productDescriptionService;
 
-    public AddProductFormController(ProductServiceImpl productService, VendorServiceImpl vendorService, ProductDescriptionServiceImpl productDescriptionService) {
+    public AddProductFormController(ProductService productService, VendorService vendorService, ProductDescriptionService productDescriptionService) {
         this.productService = productService;
         this.vendorService = vendorService;
         this.productDescriptionService = productDescriptionService;
@@ -62,8 +62,9 @@ public class AddProductFormController {
         return "redirect:/productView";
     }
 
-    @PostMapping("/addVendorToProduct/{id}")
-    public String addVendorToProduct(@PathVariable("id") Long vendorID, GenericProduct product, BindingResult bindingResult) {
+    @PostMapping("/addVendorToProduct/{id}/{productId}")
+    public String addVendorToProduct(@PathVariable("id") Long vendorID, @PathVariable("productId") Long productId, BindingResult bindingResult) {
+        GenericProduct product = (GenericProduct) productService.findById(productId);
         if (vendorService.findById(vendorID) != null) {
             for (Vendor vendor : product.getVendors()) {
                 if (vendor.getId().equals(vendorID)) {
@@ -76,6 +77,7 @@ public class AddProductFormController {
                 }
             }
         }
+        System.out.println("Unable to add vendor: " + vendorService.findById(vendorID).getName() + " to Product: " + product.getName());
         return "redirect:/productView";
     }
 

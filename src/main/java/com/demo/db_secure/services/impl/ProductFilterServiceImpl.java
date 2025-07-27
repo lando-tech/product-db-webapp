@@ -6,14 +6,13 @@ import com.demo.db_secure.domains.products.Product;
 import com.demo.db_secure.filters.Manufacturer;
 import com.demo.db_secure.filters.ProductCategory;
 import com.demo.db_secure.filters.ProductFilter;
-import com.demo.db_secure.services.interfaces.ProductFilterService;
 import com.demo.db_secure.services.interfaces.ProductService;
 
 import java.util.List;
 import java.util.stream.Collectors;
 
 @Service
-public class ProductFilterServiceImpl implements ProductFilterService {
+public class ProductFilterServiceImpl implements com.demo.db_secure.services.interfaces.ProductFilterService {
 
     private final ProductService productService;
 

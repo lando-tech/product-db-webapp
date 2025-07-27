@@ -6,14 +6,13 @@ import com.demo.db_secure.domains.products.Product;
 import com.demo.db_secure.filters.Manufacturer;
 import com.demo.db_secure.filters.ProductCategory;
 import com.demo.db_secure.repositories.ProductRepo;
-import com.demo.db_secure.services.interfaces.ProductService;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
 @Service
-public class ProductServiceImpl implements ProductService {
+public class ProductServiceImpl implements com.demo.db_secure.services.interfaces.ProductService {
 
     private final ProductRepo productRepo;
 
