@@ -81,6 +81,7 @@ public class Vendor implements Serializable {
         this.products = products;
     }
 
+    @Transactional
     public void addProduct(Product product) {
         if (this.products.contains(product)) {
             throw new IllegalArgumentException("Product already exists");

@@ -131,6 +131,7 @@ public abstract class Product extends Auditable implements Serializable {
         this.vendors = vendors;
     }
 
+    @Transactional
     public void addVendor(Vendor vendor) {
         try {
             this.vendors.add(vendor);

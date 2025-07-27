@@ -37,6 +37,7 @@ public class UserServiceImpl implements UserService {
         return this.userRepo.findByLastName(lastName);
     }
 
+    @Override
     public List<User> findAll() {
         return (List<User>) this.userRepo.findAll();
     }

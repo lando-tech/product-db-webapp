@@ -1,5 +1,7 @@
 package com.demo.db_secure.services.impl;
 
+import com.demo.db_secure.domains.products.GenericProduct;
+import com.demo.db_secure.domains.products.Vendor;
 import org.springframework.stereotype.Service;
 
 import com.demo.db_secure.domains.products.Product;
@@ -9,6 +11,7 @@ import com.demo.db_secure.repositories.ProductRepo;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 import java.util.Optional;
 
 @Service

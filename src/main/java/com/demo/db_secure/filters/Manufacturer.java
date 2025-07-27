@@ -8,7 +8,8 @@ public enum Manufacturer {
     LG("LG"),
     SAMSUNG("Samsung"),
     CISCO("CISCO"),
-    SHURE("Shure");
+    SHURE("Shure"),
+    LINKSYS("Linksys");
 
     private final String value;
     Manufacturer(String value) {

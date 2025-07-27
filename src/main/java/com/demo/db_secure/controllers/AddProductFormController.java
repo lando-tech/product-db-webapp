@@ -66,7 +66,7 @@ public class AddProductFormController {
     }
 
     @PostMapping("/addVendorToProduct/{id}/{productId}")
-    @Transactional
+//    @Transactional
     public String addVendorToProduct(@PathVariable("id") Long vendorID, @PathVariable("productId") Long productId) {
         GenericProduct product = (GenericProduct) Objects.requireNonNull(productService.findById(productId));
         Vendor vendor = Objects.requireNonNull(vendorService.findById(vendorID));

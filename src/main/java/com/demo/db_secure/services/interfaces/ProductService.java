@@ -3,6 +3,7 @@ package com.demo.db_secure.services.interfaces;
 import java.util.List;
 
 import com.demo.db_secure.domains.products.Product;
+import com.demo.db_secure.domains.products.Vendor;
 import com.demo.db_secure.filters.Manufacturer;
 import com.demo.db_secure.filters.ProductCategory;
 
