@@ -3,6 +3,7 @@ package com.demo.db_secure.bootstrap;
 import com.demo.db_secure.domains.User;
 import com.demo.db_secure.domains.products.Product;
 import com.demo.db_secure.domains.products.GenericProduct;
+import com.demo.db_secure.domains.products.ProductDescription;
 import com.demo.db_secure.domains.products.Vendor;
 import com.demo.db_secure.filters.Manufacturer;
 import com.demo.db_secure.filters.ProductCategory;
@@ -37,6 +38,17 @@ public class BootStrap implements CommandLineRunner {
         if (products.isEmpty()) {
             bootStrapProducts();
         }
+        if (vendors.isEmpty()) {
+            bootStrapVendors();
+        }
+//        if (users.isEmpty()) {
+//            addUser(
+//                    "Tom",
+//                    "Hanks",
+//                    "admin",
+//                    "admin"
+//            );
+//        }
     }
 
     private void addProduct(
@@ -54,12 +66,12 @@ public class BootStrap implements CommandLineRunner {
         newProduct.setPrice(price);
         newProduct.setProductCategory(productCategory);
         newProduct.setManufacturer(manufacturer);
+        newProduct.setProductDescription(new ProductDescription());
         this.productService.save(newProduct);
     }
 
-    private void addVendor(Long id, String vendorName, String vendorEmail, String vendorPhoneNumber, String vendorCageCode) {
+    private void addVendor(String vendorName, String vendorEmail, String vendorPhoneNumber, String vendorCageCode) {
         Vendor vendor = new Vendor();
-        vendor.setId(id);
         vendor.setName(vendorName);
         vendor.setPocEmail(vendorEmail);
         vendor.setPocPhoneNumber(vendorPhoneNumber);
@@ -67,9 +79,8 @@ public class BootStrap implements CommandLineRunner {
         vendorService.save(vendor);
     }
 
-    private void addUser(Long id, String firstName, String lastName, String userName, String password) {
+    private void addUser(String firstName, String lastName, String userName, String password) {
         User newUser = new User();
-        newUser.setId(id);
         newUser.setFirstName(firstName);
         newUser.setLastName(lastName);
         newUser.setUserName(userName);
@@ -117,6 +128,27 @@ public class BootStrap implements CommandLineRunner {
                 497.54,
                 ProductCategory.NETWORKING,
                 Manufacturer.LINKSYS
+        );
+    }
+
+    private void bootStrapVendors() {
+        addVendor(
+                "Bob's TV's",
+                "john@bobstv.com",
+                "123-222-3333",
+                "AL3403"
+        );
+        addVendor(
+                "Ironhorse Industries",
+                "larry@ironhorse.com",
+                "345-555-6666",
+                "RT00244"
+        );
+        addVendor(
+                "LG Retail Sales",
+                "tom@lgsales.com",
+                "123-789-0067",
+                "RY40012"
         );
     }
 }
