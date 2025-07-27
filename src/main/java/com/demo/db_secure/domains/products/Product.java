@@ -13,6 +13,7 @@ import java.util.Set;
 
 import com.demo.db_secure.filters.Manufacturer;
 import com.demo.db_secure.filters.ProductCategory;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.Objects;
 
@@ -50,7 +51,7 @@ public abstract class Product extends Auditable implements Serializable {
     @NotNull(message = "Manufacturer cannot be blank")
     Manufacturer manufacturer;
 
-    @ManyToMany(fetch = FetchType.LAZY)
+    @ManyToMany(fetch = FetchType.LAZY, cascade = {CascadeType.MERGE, CascadeType.PERSIST})
     @JoinTable(
             name = "product_vendor",
             joinColumns = @JoinColumn(name = "product_id"),

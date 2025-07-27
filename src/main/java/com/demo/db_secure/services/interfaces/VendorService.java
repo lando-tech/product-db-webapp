@@ -5,10 +5,10 @@ import java.util.List;
 import com.demo.db_secure.domains.products.Vendor;
 
 public interface VendorService {
-    public List<Vendor> findAll();
-    public Vendor findById(long id);
-    public Vendor findByName(String name);
-    public List<Vendor> listAll(String keyword);
-    public void save(Vendor vendor);
-    public void deleteById(long id);
+    List<Vendor> findAll();
+    Vendor findById(long id);
+    Vendor findByName(String name);
+    List<Vendor> listAll(String keyword);
+    void save(Vendor vendor);
+    void deleteById(long id);
 }

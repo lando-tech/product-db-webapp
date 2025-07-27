@@ -4,6 +4,7 @@ import jakarta.persistence.*;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Size;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.io.Serializable;
 import java.util.HashSet;
@@ -30,7 +31,7 @@ public class Vendor implements Serializable {
     @Size(min = 0, max = 50, message = "Vendor Cage Code cannot exceed 50 characters")
     private String cageCode;
 
-    @ManyToMany(fetch = FetchType.LAZY, mappedBy = "vendors")
+    @ManyToMany(fetch = FetchType.LAZY, mappedBy = "vendors", cascade = {CascadeType.MERGE, CascadeType.PERSIST})
     private Set<Product> products = new HashSet<>();
 
     public Vendor() {}

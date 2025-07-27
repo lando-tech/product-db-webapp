@@ -7,6 +7,7 @@ import com.demo.db_secure.services.interfaces.ProductDescriptionService;
 import com.demo.db_secure.services.interfaces.ProductService;
 import com.demo.db_secure.services.interfaces.VendorService;
 import jakarta.validation.Valid;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.ui.Model;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
@@ -17,6 +18,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 
 import com.demo.db_secure.filters.Manufacturer;
 import com.demo.db_secure.filters.ProductCategory;
+
+import java.util.Objects;
 
 @Controller
 public class AddProductFormController {
@@ -63,21 +66,17 @@ public class AddProductFormController {
     }
 
     @PostMapping("/addVendorToProduct/{id}/{productId}")
-    public String addVendorToProduct(@PathVariable("id") Long vendorID, @PathVariable("productId") Long productId, BindingResult bindingResult) {
-        GenericProduct product = (GenericProduct) productService.findById(productId);
-        if (vendorService.findById(vendorID) != null) {
-            for (Vendor vendor : product.getVendors()) {
-                if (vendor.getId().equals(vendorID)) {
-                    bindingResult.rejectValue("vendorId", "error.vendorId");
-                    return "productForm";
-                } else {
-                    product.addVendor(vendor);
-                    vendor.addProduct(product);
-                    return "redirect:/productForm";
-                }
-            }
+    @Transactional
+    public String addVendorToProduct(@PathVariable("id") Long vendorID, @PathVariable("productId") Long productId) {
+        GenericProduct product = (GenericProduct) Objects.requireNonNull(productService.findById(productId));
+        Vendor vendor = Objects.requireNonNull(vendorService.findById(vendorID));
+        if (product.getVendors().contains(vendor)) {
+            System.out.println("Vendor with ID: " + vendorID + " already exists for " + product.getName());
+            return "productForm";
         }
-        System.out.println("Unable to add vendor: " + vendorService.findById(vendorID).getName() + " to Product: " + product.getName());
+        product.addVendor(vendor);
+        vendor.addProduct(product);
+        System.out.println("Added vendor: " + vendor.getName() + " to product: " + product.getName());
         return "redirect:/productView";
     }
 
