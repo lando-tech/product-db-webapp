@@ -15,6 +15,7 @@ public interface ProductService {
     List<Product> findByCategory(ProductCategory category);
     List<Product> findByManufacturer(Manufacturer manufacturer);
     // List<Product> searchProductByKeyword(String keyword);
+    void addVendorToProduct(Long productId, Long vendorId);
     void save(Product product);
     void deleteById(long id);
 }

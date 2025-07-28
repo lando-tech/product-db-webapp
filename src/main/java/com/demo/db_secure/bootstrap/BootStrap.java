@@ -66,8 +66,14 @@ public class BootStrap implements CommandLineRunner {
         newProduct.setPrice(price);
         newProduct.setProductCategory(productCategory);
         newProduct.setManufacturer(manufacturer);
-        newProduct.setProductDescription(new ProductDescription());
+        addProductDescription(newProduct);
         this.productService.save(newProduct);
+    }
+
+    private void addProductDescription(GenericProduct product) {
+        ProductDescription productDescription = new ProductDescription();
+        product.setProductDescription(productDescription);
+        productDescription.setProduct(product);
     }
 
     private void addVendor(String vendorName, String vendorEmail, String vendorPhoneNumber, String vendorCageCode) {

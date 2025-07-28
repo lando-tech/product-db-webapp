@@ -8,6 +8,8 @@ import com.demo.db_secure.domains.products.Product;
 import com.demo.db_secure.filters.Manufacturer;
 import com.demo.db_secure.filters.ProductCategory;
 import com.demo.db_secure.repositories.ProductRepo;
+import com.demo.db_secure.repositories.VendorRepo;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -18,9 +20,11 @@ import java.util.Optional;
 public class ProductServiceImpl implements com.demo.db_secure.services.interfaces.ProductService {
 
     private final ProductRepo productRepo;
+    private final VendorRepo vendorRepo;
 
-    public ProductServiceImpl(ProductRepo productRepo) {
+    public ProductServiceImpl(ProductRepo productRepo, VendorRepo vendorRepo) {
         this.productRepo = productRepo;
+        this.vendorRepo = vendorRepo;
     }
 
     @Override
@@ -76,6 +80,26 @@ public class ProductServiceImpl implements com.demo.db_secure.services.interface
     //     }
     //     return this.productRepo.searchProductByKeyword(keyword);
     // }
+
+    @Override
+    @Transactional
+    public void addVendorToProduct(Long productId, Long vendorId) {
+        var optionalProduct = productRepo.findById(productId);
+        var optionalVendor = Objects.requireNonNull(vendorRepo.findById(vendorId));
+        if (optionalProduct.isPresent() && optionalVendor.isPresent()) {
+            GenericProduct product = (GenericProduct) optionalProduct.get();
+            var vendor = optionalVendor.get();
+            if (product.getVendors().contains(vendor)) {
+                throw new IllegalArgumentException(
+                        "Vendor with ID: " + vendorId + " is already assigned to product: " + product.getName()
+                );
+            }
+            product.addVendor(vendor);
+            vendor.addProduct(product);
+        } else {
+            throw new RuntimeException("Unable to find product ID: " + productId + " or vendor ID: " + vendorId);
+        }
+    }
 
     @Override
     public void save(Product product) {
