@@ -1,10 +1,10 @@
 package com.demo.db_secure.services.impl;
 
 import com.demo.db_secure.domains.products.GenericProduct;
-import com.demo.db_secure.domains.products.Vendor;
 import org.springframework.stereotype.Service;
 
 import com.demo.db_secure.domains.products.Product;
+import com.demo.db_secure.services.interfaces.ProductService;
 import com.demo.db_secure.filters.Manufacturer;
 import com.demo.db_secure.filters.ProductCategory;
 import com.demo.db_secure.repositories.ProductRepo;
@@ -17,7 +17,7 @@ import java.util.Objects;
 import java.util.Optional;
 
 @Service
-public class ProductServiceImpl implements com.demo.db_secure.services.interfaces.ProductService {
+public class ProductServiceImpl implements ProductService {
 
     private final ProductRepo productRepo;
     private final VendorRepo vendorRepo;
@@ -73,21 +73,13 @@ public class ProductServiceImpl implements com.demo.db_secure.services.interface
         return this.productRepo.findByManufacturer(manufacturer);
     }
 
-    // @Override
-    // public List<Product> searchProductByKeyword(String keyword) {
-    //     if (keyword == null) {
-    //         throw new IllegalArgumentException("keyword cannot be null");
-    //     }
-    //     return this.productRepo.searchProductByKeyword(keyword);
-    // }
-
     @Override
     @Transactional
     public void addVendorToProduct(Long productId, Long vendorId) {
         var optionalProduct = productRepo.findById(productId);
         var optionalVendor = Objects.requireNonNull(vendorRepo.findById(vendorId));
         if (optionalProduct.isPresent() && optionalVendor.isPresent()) {
-            GenericProduct product = (GenericProduct) optionalProduct.get();
+            var product = (GenericProduct) optionalProduct.get();
             var vendor = optionalVendor.get();
             if (product.getVendors().contains(vendor)) {
                 throw new IllegalArgumentException(

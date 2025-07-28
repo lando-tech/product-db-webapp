@@ -66,17 +66,8 @@ public class AddProductFormController {
     }
 
     @PostMapping("/addVendorToProduct/{id}/{productId}")
-//    @Transactional
     public String addVendorToProduct(@PathVariable("id") Long vendorID, @PathVariable("productId") Long productId) {
-        GenericProduct product = (GenericProduct) Objects.requireNonNull(productService.findById(productId));
-        Vendor vendor = Objects.requireNonNull(vendorService.findById(vendorID));
-        if (product.getVendors().contains(vendor)) {
-            System.out.println("Vendor with ID: " + vendorID + " already exists for " + product.getName());
-            return "productForm";
-        }
-        product.addVendor(vendor);
-        vendor.addProduct(product);
-        System.out.println("Added vendor: " + vendor.getName() + " to product: " + product.getName());
+        productService.addVendorToProduct(productId, vendorID);
         return "redirect:/productView";
     }
 
