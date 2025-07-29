@@ -4,7 +4,73 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="91045119-690a-42c2-b2ba-c93a453f053c" name="Changes" comment="updates" />
+    <list default="true" id="91045119-690a-42c2-b2ba-c93a453f053c" name="Changes" comment="updates">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/demo/db_secure/controllers/DashboardController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/audit-service/build.gradle.kts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audit-service/src/main/java/io/landotech/auditservice/domains/Auditable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/db_secure/domains/Auditable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/audit-service/src/main/java/io/landotech/auditservice/domains/AuditorConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/db_secure/domains/AuditorConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-service/.gitattributes" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-service/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-service/build.gradle.kts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-service/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-service/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-service/gradlew" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-service/gradlew.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-service/src/main/java/io/landotech/productservice/bootstrap/BootStrap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/db_secure/bootstrap/BootStrap.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-service/src/main/java/io/landotech/productservice/controllers/AddProductFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/db_secure/controllers/AddProductFormController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-service/src/main/java/io/landotech/productservice/controllers/AddVendorFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/db_secure/controllers/AddVendorFormController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-service/src/main/java/io/landotech/productservice/controllers/ProductViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/db_secure/controllers/ProductViewController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-service/src/main/java/io/landotech/productservice/controllers/VendorViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/db_secure/controllers/VendorViewController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-service/src/main/java/io/landotech/productservice/domains/GenericProduct.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/db_secure/domains/products/GenericProduct.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-service/src/main/java/io/landotech/productservice/domains/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/db_secure/domains/products/Product.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-service/src/main/java/io/landotech/productservice/domains/ProductDescription.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/db_secure/domains/products/ProductDescription.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-service/src/main/java/io/landotech/productservice/domains/Vendor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/db_secure/domains/products/Vendor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-service/src/main/java/io/landotech/productservice/filters/Manufacturer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/db_secure/filters/Manufacturer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-service/src/main/java/io/landotech/productservice/filters/ProductCategory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/db_secure/filters/ProductCategory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-service/src/main/java/io/landotech/productservice/filters/ProductFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/db_secure/filters/ProductFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-service/src/main/java/io/landotech/productservice/repositories/ProductDescriptionRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/db_secure/repositories/ProductDescriptionRepo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-service/src/main/java/io/landotech/productservice/repositories/ProductRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/db_secure/repositories/ProductRepo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-service/src/main/java/io/landotech/productservice/repositories/VendorRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/db_secure/repositories/VendorRepo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-service/src/main/java/io/landotech/productservice/services/impl/ProductDescriptionServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/db_secure/services/impl/ProductDescriptionServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-service/src/main/java/io/landotech/productservice/services/impl/ProductFilterServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/db_secure/services/impl/ProductFilterServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-service/src/main/java/io/landotech/productservice/services/impl/ProductServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/db_secure/services/impl/ProductServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-service/src/main/java/io/landotech/productservice/services/impl/VendorServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/db_secure/services/impl/VendorServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-service/src/main/java/io/landotech/productservice/services/interfaces/ProductDescriptionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/db_secure/services/interfaces/ProductDescriptionService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-service/src/main/java/io/landotech/productservice/services/interfaces/ProductFilterService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/db_secure/services/interfaces/ProductFilterService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-service/src/main/java/io/landotech/productservice/services/interfaces/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/db_secure/services/interfaces/ProductService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-service/src/main/java/io/landotech/productservice/services/interfaces/VendorService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/db_secure/services/interfaces/VendorService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-service/src/main/resources/static/css/errors.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-service/src/main/resources/static/css/main.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-service/src/main/resources/static/js/validateProductForm.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-service/src/main/resources/templates/error.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/error.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-service/src/main/resources/templates/productForm.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/productForm.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-service/src/main/resources/templates/productView.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/productView.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-service/src/main/resources/templates/vendorForm.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/vendorForm.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-service/src/main/resources/templates/vendorView.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/vendorView.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/db_secure/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/db_secure/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/.gitattributes" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/build.gradle.kts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/gradlew" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/gradlew.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/io/landotech/userservice/bootstrap/BootStrapUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/db_secure/bootstrap/BootStrapUser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/io/landotech/userservice/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/db_secure/config/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/io/landotech/userservice/controllers/UserFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/db_secure/controllers/UserFormController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/io/landotech/userservice/domains/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/db_secure/domains/users/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/io/landotech/userservice/domains/UserPrincipalDetails.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/db_secure/domains/users/UserPrincipalDetails.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/io/landotech/userservice/domains/UserProfile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/db_secure/domains/users/UserProfile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/io/landotech/userservice/domains/UserRoles.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/db_secure/domains/users/UserRoles.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/io/landotech/userservice/repositories/UserRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/db_secure/repositories/UserRepo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/io/landotech/userservice/services/CustomUserDetailService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/db_secure/services/impl/CustomUserDetailService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/io/landotech/userservice/services/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/db_secure/services/interfaces/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/io/landotech/userservice/services/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/db_secure/services/impl/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/resources/static/js/validateUserForm.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/resources/templates/userForm.html" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -114,14 +180,13 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "Spring Boot.Main (1).executor": "Run",
-    "Spring Boot.Main.executor": "Debug",
+    "Spring Boot.Main.executor": "Run",
     "Spring Boot.ProductServiceApplication.executor": "Run",
     "Spring Boot.UserServiceApplication.executor": "Run",
     "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "C:/Users/aaron/Projects/product-db-webapp/src/main/java/com/demo/db_secure/domains",
+    "last_opened_file_path": "C:/Users/aaron/Projects/product-db-webapp",
     "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -146,11 +211,11 @@
       <recent name="C:\Users\aaron\Projects\product-db-webapp\product-service\src\main\resources\templates" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\aaron\Projects\product-db-webapp\src\main\resources\templates" />
       <recent name="C:\Users\aaron\Projects\product-db-webapp\user-service\src\main\resources\static\js" />
       <recent name="C:\Users\aaron\Projects\product-db-webapp\user-service\src\main\resources\templates" />
       <recent name="C:\Users\aaron\Projects\product-db-webapp\product-service\src\main\resources\static\js" />
       <recent name="C:\Users\aaron\Projects\product-db-webapp\product-service\src\main\resources" />
-      <recent name="C:\Users\aaron\Projects\product-db-webapp\src\main\resources\templates" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="io.landotech.productservice.bootstrap" />
@@ -279,7 +344,7 @@
     </configuration>
     <configuration name="Main" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
-      <module name="com.demo.db_secure.main" />
+      <module name="db_secure.main" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.demo.db_secure.Main" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -388,6 +453,7 @@
       <workItem from="1753750493865" duration="137000" />
       <workItem from="1753750797371" duration="11775000" />
       <workItem from="1753762682560" duration="832000" />
+      <workItem from="1753769821916" duration="3301000" />
     </task>
     <task id="LOCAL-00001" summary="started userForm to enable adding new users, currently working through issues in the db entry table.">
       <option name="closed" value="true" />
@@ -515,6 +581,16 @@
     <MESSAGE value="Refactored: moved all product files into product-service, all user files into user-service, and audit files into audit-service. Going forward a module-based approach will be used" />
     <MESSAGE value="updates" />
     <option name="LAST_COMMIT_MESSAGE" value="updates" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.IllegalArgumentException" package="java.lang" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

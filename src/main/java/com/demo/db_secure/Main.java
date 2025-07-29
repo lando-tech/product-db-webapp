@@ -5,11 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.data.jpa.repository.config.EnableJpaAuditing;
 
 
-@SpringBootApplication(
-		scanBasePackages = {
-				"com.demo.db_secure", "io.landotech.productservice", "io.landotech.userservice", "io.landotech.auditservice"
-		}
-)
+@SpringBootApplication
 @EnableJpaAuditing
 public class Main {
 
