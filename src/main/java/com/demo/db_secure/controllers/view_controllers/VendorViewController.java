@@ -1,4 +1,4 @@
-package com.demo.db_secure.controllers;
+package com.demo.db_secure.controllers.view_controllers;
 
 import com.demo.db_secure.services.interfaces.VendorService;
 import org.springframework.stereotype.Controller;

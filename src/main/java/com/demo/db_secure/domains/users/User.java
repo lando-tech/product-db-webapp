@@ -2,7 +2,7 @@ package com.demo.db_secure.domains.users;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.*;
-import com.demo.db_secure.domains.Auditable;
+import com.demo.db_secure.domains.auditors.Auditable;
 
 import java.io.Serializable;
 import java.util.Objects;

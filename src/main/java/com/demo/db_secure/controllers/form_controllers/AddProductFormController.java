@@ -1,4 +1,4 @@
-package com.demo.db_secure.controllers;
+package com.demo.db_secure.controllers.form_controllers;
 
 import com.demo.db_secure.domains.products.GenericProduct;
 import com.demo.db_secure.domains.products.ProductDescription;

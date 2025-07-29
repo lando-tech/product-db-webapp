@@ -1,4 +1,4 @@
-package com.demo.db_secure.domains;
+package com.demo.db_secure.domains.auditors;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.EntityListeners;

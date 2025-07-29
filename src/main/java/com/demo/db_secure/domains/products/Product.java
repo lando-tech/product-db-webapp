@@ -1,7 +1,7 @@
 package com.demo.db_secure.domains.products;
 
 
-import com.demo.db_secure.domains.Auditable;
+import com.demo.db_secure.domains.auditors.Auditable;
 import com.demo.db_secure.filters.Manufacturer;
 import com.demo.db_secure.filters.ProductCategory;
 import jakarta.persistence.*;
