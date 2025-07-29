@@ -1,6 +1,7 @@
 package io.landotech.productservice.services.interfaces;
 
 import io.landotech.productservice.domains.Vendor;
+import io.landotech.productservice.repositories.VendorRepo;
 
 import java.util.List;
 

@@ -3,6 +3,7 @@ package io.landotech.userservice.services;
 import java.util.List;
 import java.util.Optional;
 
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import io.landotech.userservice.domains.User;
 import io.landotech.userservice.repositories.UserRepo;
@@ -11,9 +12,11 @@ import io.landotech.userservice.repositories.UserRepo;
 public class UserServiceImpl implements UserService {
 
     private final UserRepo userRepo;
+    private final PasswordEncoder passwordEncoder;
 
-    public UserServiceImpl(UserRepo userRepo) {
+    public UserServiceImpl(UserRepo userRepo, PasswordEncoder passwordEncoder) {
         this.userRepo = userRepo;
+        this.passwordEncoder = passwordEncoder;
     }
 
     public Optional<User> findById(Long id) {
@@ -42,6 +45,7 @@ public class UserServiceImpl implements UserService {
 
     public void save(User user) {
         if (!verifyExistingUser(user)) {
+            user.setPassword(this.passwordEncoder.encode(user.getPassword()));
             this.userRepo.save(user);
         }
         throw new IllegalArgumentException("User already exists! " + user.getUserName() + " " + user.getId());

@@ -36,18 +36,6 @@
                             <input id="userNameField" type="text" th:field="*{userName}" placeholder="johndoe123" class="form-control mb-4 col-4"/>
                         </div>
                         <div>
-                            <label for="firstNameField">First Name:</label>
-                            <div th:if="${#fields.hasErrors('firstName')}" th:errors="*{firstName}" class="text-danger"></div>
-                            <div id="firstNameError" class="client-side-errors"></div>
-                            <input id="firstNameField" type="text" th:field="*{firstName}" placeholder="John" class="form-control mb-4 col-4"/>
-                        </div>
-                        <div>
-                            <label for="lastNameField">Last Name:</label>
-                            <div th:if="${#fields.hasErrors('lastName')}" th:errors="*{lastName}" class="text-danger"></div>
-                            <div id="lastNameError" class="client-side-errors"></div>
-                            <input id="lastNameField" type="text" th:field="*{lastName}" placeholder="Doe" class="form-control mb-4 col-4"/>
-                        </div>
-                        <div>
                             <label for="passwordField">Password:</label>
                             <div th:if="${#fields.hasErrors('password')}" th:errors="*{password}" class="text-danger"></div>
                             <div id="passwordError" class="client-side-errors"></div>

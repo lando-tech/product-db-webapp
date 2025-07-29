@@ -18,6 +18,8 @@ public class GenericProduct extends Product {
        return productDescription;
    }
 
+   public GenericProduct() {}
+
    @Transactional
    public void setProductDescription(ProductDescription productDescription) {
        this.productDescription = productDescription;
