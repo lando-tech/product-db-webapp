@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/com.demo.db_secure.main.iml" filepath="$PROJECT_DIR$/.idea/modules/com.demo.db_secure.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/audit-service/db_secure.audit-service.main.iml" filepath="$PROJECT_DIR$/.idea/modules/audit-service/db_secure.audit-service.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/product-service/db_secure.product-service.main.iml" filepath="$PROJECT_DIR$/.idea/modules/product-service/db_secure.product-service.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/user-service/db_secure.user-service.main.iml" filepath="$PROJECT_DIR$/.idea/modules/user-service/db_secure.user-service.main.iml" />
+    </modules>
+  </component>
+</project>

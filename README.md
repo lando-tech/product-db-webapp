@@ -233,7 +233,7 @@ For support and questions, please contact the development team or create an issu
 
 ## 🏗️ Build Information
 
-- **Group**: com.easyrok
+- **Group**: com.demo
 - **Artifact**: db_secure
 - **Version**: 0.0.1-SNAPSHOT
 - **Java Version**: 21

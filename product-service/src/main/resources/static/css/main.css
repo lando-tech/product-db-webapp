@@ -1,0 +1,8 @@
+
+.client-side-errors {
+    display: none;
+    color: red;
+    /*margin-top: -10px;*/
+    margin-bottom: 5px;
+    font-size: 0.875em;
+}

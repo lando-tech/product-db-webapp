@@ -1,0 +1,88 @@
+package io.landotech.productservice.controllers;
+
+import io.landotech.productservice.domains.GenericProduct;
+import io.landotech.productservice.domains.ProductDescription;
+import io.landotech.productservice.filters.Manufacturer;
+import io.landotech.productservice.filters.ProductCategory;
+import io.landotech.productservice.services.interfaces.ProductDescriptionService;
+import io.landotech.productservice.services.interfaces.ProductService;
+import io.landotech.productservice.services.interfaces.VendorService;
+import jakarta.validation.Valid;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+
+@Controller
+public class AddProductFormController {
+
+    private final ProductService productService;
+    private final VendorService vendorService;
+    private final ProductDescriptionService productDescriptionService;
+
+    public AddProductFormController(ProductService productService, VendorService vendorService, ProductDescriptionService productDescriptionService) {
+        this.productService = productService;
+        this.vendorService = vendorService;
+        this.productDescriptionService = productDescriptionService;
+    }
+
+    @GetMapping("/productForm")
+    public String showAddForm(Model model) {
+        model.addAttribute("productCategory", ProductCategory.values());
+        model.addAttribute("manufacturer",  Manufacturer.values());
+        model.addAttribute("productDescription", new ProductDescription());
+        model.addAttribute("product", new GenericProduct());
+        model.addAttribute("vendors",  vendorService.findAll());
+        return "productForm";
+    }
+
+    @PostMapping("/processProductForm")
+    public String processProductForm(
+            @Valid @ModelAttribute("product") GenericProduct product,
+            BindingResult bindingResult1,
+            @Valid @ModelAttribute("productDescription") ProductDescription productDescription,
+            BindingResult bindingResult2,
+            Model model
+    ) {
+        model.addAttribute("product",  product);
+        if (bindingResult1.hasErrors() || bindingResult2.hasErrors()) {
+            updateProductDescription(product, productDescription);
+            model.addAttribute("productDescription", product.getProductDescription());
+            model.addAttribute("manufacturer", Manufacturer.values());
+            model.addAttribute("productCategory", ProductCategory.values());
+            model.addAttribute("vendors",  vendorService.findAll());
+            return "productForm";
+        }
+        updateProductDescription(product, productDescription);
+        productService.save(product);
+        return "redirect:/productView";
+    }
+
+    @PostMapping("/addVendorToProduct/{id}/{productId}")
+    public String addVendorToProduct(@PathVariable("id") Long vendorID, @PathVariable("productId") Long productId) {
+        productService.addVendorToProduct(productId, vendorID);
+        return "redirect:/productView";
+    }
+
+    public void updateProductDescription(GenericProduct product, ProductDescription productDescription) {
+        if (productDescription.getId() != null) {
+            ProductDescription existingProductDescription = this.productDescriptionService.findById(productDescription.getId()).orElse(null);
+            if (existingProductDescription != null) {
+                existingProductDescription.setProductFacts(productDescription.getProductFacts());
+                existingProductDescription.setGeneralDescription(productDescription.getGeneralDescription());
+                existingProductDescription.setInstallationDescription(productDescription.getInstallationDescription());
+                product.setProductDescription(existingProductDescription);
+                existingProductDescription.setProduct(product);
+            } else {
+                product.setProductDescription(productDescription);
+                productDescription.setProduct(product);
+            }
+        } else {
+            product.setProductDescription(productDescription);
+            productDescription.setProduct(product);
+        }
+    }
+}
