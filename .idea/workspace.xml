@@ -1,0 +1,523 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="91045119-690a-42c2-b2ba-c93a453f053c" name="Changes" comment="updates" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+    <projectState path="$PROJECT_DIR$/product-service">
+      <ProjectState />
+    </projectState>
+    <projectState path="$PROJECT_DIR$/user-service">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
+        <task path="$PROJECT_DIR$/product-service">
+          <activation />
+        </task>
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="db_secure" type="f1a62948:ProjectNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="db_secure" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="db_secure" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="build" type="c8890929:TasksNode$1" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+        <option value="CSS File" />
+        <option value="com.intellij.jpb.JpaEntity" />
+        <option value="Spring Service" />
+        <option value="Enum" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="PREVIEW_PUSH_ON_COMMIT_AND_PUSH" value="false" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;lando-tech&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;git@github.com:lando-tech/product-db-webapp.git&quot;,
+    &quot;accountId&quot;: &quot;79d3a867-c460-4a2a-b0f4-fd0cf21a8db4&quot;
+  }
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 5
+}</component>
+  <component name="ProjectId" id="30292oB7PJV5eGXtJBO6G6w0WxT" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="abbreviatePackageNames" value="true" />
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+    <option name="showMembers" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Gradle.Build product-db-webapp.executor": "Run",
+    "Gradle.Build product-service.executor": "Run",
+    "Gradle.product-db-webapp [bootRun].executor": "Run",
+    "Gradle.product-db-webapp [build].executor": "Run",
+    "Gradle.product-db-webapp [clean].executor": "Run",
+    "Gradle.product-db-webapp:product-service [build].executor": "Run",
+    "Gradle.product-db-webapp:product-service [clean].executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Spring Boot.Main (1).executor": "Run",
+    "Spring Boot.Main.executor": "Debug",
+    "Spring Boot.ProductServiceApplication.executor": "Run",
+    "Spring Boot.UserServiceApplication.executor": "Run",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "C:/Users/aaron/Projects/product-db-webapp/src/main/java/com/demo/db_secure/domains",
+    "list.type.of.created.stylesheet": "CSS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "run.configurations.included.in.services": "true",
+    "settings.editor.selected.configurable": "preferences.lookFeel",
+    "settings.editor.splitter.proportion": "0.23938224",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\aaron\Projects\product-db-webapp\src\main\java\com\demo\db_secure\domains" />
+      <recent name="C:\Users\aaron\Projects\product-db-webapp\user-service\src\main\java\io\landotech\userservice\domains" />
+      <recent name="C:\Users\aaron\Projects\product-db-webapp\product-service\src\main\resources\static\css" />
+      <recent name="C:\Users\aaron\Projects\product-db-webapp\product-service\src\main\resources\static\js" />
+      <recent name="C:\Users\aaron\Projects\product-db-webapp\product-service\src\main\resources\templates" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\aaron\Projects\product-db-webapp\user-service\src\main\resources\static\js" />
+      <recent name="C:\Users\aaron\Projects\product-db-webapp\user-service\src\main\resources\templates" />
+      <recent name="C:\Users\aaron\Projects\product-db-webapp\product-service\src\main\resources\static\js" />
+      <recent name="C:\Users\aaron\Projects\product-db-webapp\product-service\src\main\resources" />
+      <recent name="C:\Users\aaron\Projects\product-db-webapp\src\main\resources\templates" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="io.landotech.productservice.bootstrap" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="configurationTypes">
+      <set>
+        <option value="KtorApplicationConfigurationType" />
+        <option value="MicronautRunConfigurationType" />
+        <option value="QuarkusRunConfigurationType" />
+        <option value="SpringBootApplicationConfigurationType" />
+      </set>
+    </option>
+  </component>
+  <component name="RunManager" selected="Spring Boot.Main">
+    <configuration name="product-db-webapp [bootRun]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="bootRun" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="product-db-webapp [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="build" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="product-db-webapp [clean]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="clean" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="product-db-webapp:product-service [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/product-service" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="build" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="product-db-webapp:product-service [clean]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/product-service" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="clean" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="Main" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
+      <module name="com.demo.db_secure.main" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.demo.db_secure.Main" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserServiceApplication (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="db_secure.user-service.main" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="io.landotech.userservice.UserServiceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Autodetect">
+      <module name="kotlin.scripts.KotlinBuildScript.build.gradle.kts" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Doctests">
+      <module name="kotlin.scripts.KotlinBuildScript.build.gradle.kts" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Gradle.product-db-webapp [bootRun]" />
+      <item itemvalue="Gradle.product-db-webapp [build]" />
+      <item itemvalue="Gradle.product-db-webapp [clean]" />
+      <item itemvalue="Gradle.product-db-webapp:product-service [build]" />
+      <item itemvalue="Gradle.product-db-webapp:product-service [clean]" />
+      <item itemvalue="Spring Boot.Main" />
+      <item itemvalue="Spring Boot.UserServiceApplication (1)" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Gradle.product-db-webapp [bootRun]" />
+        <item itemvalue="Gradle.product-db-webapp [clean]" />
+        <item itemvalue="Gradle.product-db-webapp [build]" />
+        <item itemvalue="Gradle.product-db-webapp:product-service [build]" />
+        <item itemvalue="Gradle.product-db-webapp:product-service [clean]" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-fbdcb00ec9e3-intellij.indexing.shared.core-IU-251.27812.49" />
+        <option value="bundled-js-predefined-d6986cc7102b-09060db00ec0-JavaScript-IU-251.27812.49" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="91045119-690a-42c2-b2ba-c93a453f053c" name="Changes" comment="" />
+      <created>1752814596722</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1752814596722</updated>
+      <workItem from="1752814598653" duration="869000" />
+      <workItem from="1752816076644" duration="1205000" />
+      <workItem from="1752850062299" duration="695000" />
+      <workItem from="1752850780628" duration="236000" />
+      <workItem from="1752851035928" duration="761000" />
+      <workItem from="1752852794386" duration="325000" />
+      <workItem from="1753091454565" duration="1289000" />
+      <workItem from="1753094166859" duration="6777000" />
+      <workItem from="1753107173484" duration="190000" />
+      <workItem from="1753157004281" duration="3567000" />
+      <workItem from="1753161786995" duration="3252000" />
+      <workItem from="1753182255171" duration="6672000" />
+      <workItem from="1753230701104" duration="2293000" />
+      <workItem from="1753594562367" duration="15000" />
+      <workItem from="1753594593149" duration="3300000" />
+      <workItem from="1753601607308" duration="4522000" />
+      <workItem from="1753608599656" duration="2221000" />
+      <workItem from="1753702717437" duration="1739000" />
+      <workItem from="1753743520763" duration="3843000" />
+      <workItem from="1753747690437" duration="704000" />
+      <workItem from="1753748425829" duration="103000" />
+      <workItem from="1753748920572" duration="281000" />
+      <workItem from="1753749218633" duration="1252000" />
+      <workItem from="1753750493865" duration="137000" />
+      <workItem from="1753750797371" duration="11775000" />
+      <workItem from="1753762682560" duration="832000" />
+    </task>
+    <task id="LOCAL-00001" summary="started userForm to enable adding new users, currently working through issues in the db entry table.">
+      <option name="closed" value="true" />
+      <created>1752817249510</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1752817249510</updated>
+    </task>
+    <task id="LOCAL-00002" summary="started userForm to enable adding new users, currently working through issues in the db entry table.">
+      <option name="closed" value="true" />
+      <created>1752817269965</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1752817269965</updated>
+    </task>
+    <task id="LOCAL-00003" summary="created form_validation js package.">
+      <option name="closed" value="true" />
+      <created>1752850245430</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1752850245430</updated>
+    </task>
+    <task id="LOCAL-00004" summary="removed unused query">
+      <option name="closed" value="true" />
+      <created>1752851561308</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1752851561308</updated>
+    </task>
+    <task id="LOCAL-00005" summary="added main.css, validateUserForm.js, and fixed userForm.html not showing error messages.">
+      <option name="closed" value="true" />
+      <created>1753103261426</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1753103261426</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Added Auditable base class for JPA Auditing, removed custom Auditor class, and added Javascript real time form validation for productForm.html.">
+      <option name="closed" value="true" />
+      <created>1753183903139</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1753183903139</updated>
+    </task>
+    <task id="LOCAL-00007" summary="refactored User.java to only include first name, last name, username, and password. Added UserProfile.java to incorporate phone number, email, and company name.">
+      <option name="closed" value="true" />
+      <created>1753188939011</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1753188939011</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Fixed persistence issue between Product.java and Vendor.java, can now add vendors to products and vice versa.">
+      <option name="closed" value="true" />
+      <created>1753597856764</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1753597856764</updated>
+    </task>
+    <task id="LOCAL-00009" summary="fixed issue in BootStrap.java causing ProductDescription to be null. Added addVendorToProduct to ProductService">
+      <option name="closed" value="true" />
+      <created>1753704463563</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1753704463563</updated>
+    </task>
+    <task id="LOCAL-00010" summary="implemented the addProductToVendor function inside the AddProductFormController">
+      <option name="closed" value="true" />
+      <created>1753746427532</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1753746427532</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Refactored: moved all product files into product-service, all user files into user-service, and audit files into audit-service. Going forward a module-based approach will be used">
+      <option name="closed" value="true" />
+      <created>1753758603202</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1753758603202</updated>
+    </task>
+    <task id="LOCAL-00012" summary="updates">
+      <option name="closed" value="true" />
+      <created>1753763507680</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1753763507680</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="started userForm to enable adding new users, currently working through issues in the db entry table." />
+    <MESSAGE value="created form_validation js package." />
+    <MESSAGE value="removed unused query" />
+    <MESSAGE value="added main.css, validateUserForm.js, and fixed userForm.html not showing error messages." />
+    <MESSAGE value="Added Auditable base class for JPA Auditing, removed custom Auditor class, and added Javascript real time form validation for productForm.html." />
+    <MESSAGE value="refactored User.java to only include first name, last name, username, and password. Added UserProfile.java to incorporate phone number, email, and company name." />
+    <MESSAGE value="Fixed persistence issue between Product.java and Vendor.java, can now add vendors to products and vice versa." />
+    <MESSAGE value="fixed issue in BootStrap.java causing ProductDescription to be null. Added addVendorToProduct to ProductService" />
+    <MESSAGE value="implemented the addProductToVendor function inside the AddProductFormController" />
+    <MESSAGE value="Refactored: moved all product files into product-service, all user files into user-service, and audit files into audit-service. Going forward a module-based approach will be used" />
+    <MESSAGE value="updates" />
+    <option name="LAST_COMMIT_MESSAGE" value="updates" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>
