@@ -1,4 +1,4 @@
-# Product Database Web Application
+# yaj-product-db (Yet Another Java Product Database)
 
 A Spring Boot web application designed for managing products and vendors in a secure database environment. This application provides a comprehensive solution for product catalog management with features for adding, viewing, and managing products and their associated vendors.
 
